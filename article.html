@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="article-title">Article Title</h1>
+    </header>
+    <main>
+        <div id="article-content"></div> <!-- Content of the article -->
+    </main>
+    <footer>
+        <p>&copy; 2025 Web Articles Project</p>
+    </footer>
+    <script>
+        // Load article data from query parameters
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('title');
+        const content = params.get('content');
+
+        document.getElementById('article-title').textContent = title;
+        document.getElementById('article-content').textContent = content;
+    </script>
+</body>
+</html>

@@ -13,6 +13,21 @@ async function fetchArticles() {
     }
 }
 
+const sampleArticles = [
+    {
+        "title": "Article 1",
+        "content": "This is the content of article 1."
+    },
+    {
+        "title": "Article 2",
+        "content": "This is the content of article 2."
+    },
+    {
+        "title": "NVIDIA RTX 5070: The Next Big Thing in Gaming!",
+        "content": `Hey gamers and tech fans! You know how you wait for the next cool thing in the world of video games? Well, NVIDIA just dropped their brand-new RTX 5070 graphics card, and it looks like a really awesome upgrade for anyone wanting smoother, better-looking games!`
+    }
+];
+
 function displayArticles(articles) {
     const articlesContainer = document.getElementById('articles');
     articlesContainer.innerHTML = ''; // Clear any existing articles
@@ -24,26 +39,16 @@ function displayArticles(articles) {
         const titleElement = document.createElement('h2');
         titleElement.textContent = article.title;
 
-        const contentElement = document.createElement('p');
-        contentElement.textContent = article.content;
+        const linkElement = document.createElement('a');
+        linkElement.textContent = "Read More";
+        linkElement.href = `article.html?title=${encodeURIComponent(article.title)}&content=${encodeURIComponent(article.content)}`;
 
         articleElement.appendChild(titleElement);
-        articleElement.appendChild(contentElement);
+        articleElement.appendChild(linkElement);
         articlesContainer.appendChild(articleElement);
     });
 }
 
-document.addEventListener('DOMContentLoaded', fetchArticles);
-
-const sampleArticles = [
-    {
-        "title": "Article 1",
-        "content": "This is the content of article 1."
-    },
-    {
-        "title": "Article 2",
-        "content": "This is the content of article 2."
-    }
-];
-
-displayArticles(sampleArticles);
+document.addEventListener('DOMContentLoaded', () => {
+    displayArticles(sampleArticles);
+});
