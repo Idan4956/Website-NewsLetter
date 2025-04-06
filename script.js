@@ -33,4 +33,17 @@ function displayArticles(articles) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', fetchArticles); 
+document.addEventListener('DOMContentLoaded', fetchArticles);
+
+const sampleArticles = [
+    {
+        "title": "Article 1",
+        "content": "This is the content of article 1."
+    },
+    {
+        "title": "Article 2",
+        "content": "This is the content of article 2."
+    }
+];
+
+displayArticles(sampleArticles);
