@@ -33,4 +33,4 @@ function displayArticles(articles) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', fetchArticles);
+document.addEventListener('DOMContentLoaded', fetchArticles); 
