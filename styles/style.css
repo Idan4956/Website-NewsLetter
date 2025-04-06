@@ -112,6 +112,28 @@ header nav ul li a:hover {
     background: #4fc3f7; /* Light azure blue */
 }
 
+/* Home Button Styling */
+.home-button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #1a73e8; /* Azure blue */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+    background: #4fc3f7; /* Light azure blue */
+    transform: scale(1.05);
+}
+
 /* Footer Styling */
 footer {
     background: #1a73e8; /* Azure blue */
