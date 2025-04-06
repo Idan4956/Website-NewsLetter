@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css?v=1.0">
 </head>
 <body>
     <header>
-        <h1>My Articles</h1>
+        <div class="container">
+            <h1>My Articles</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <div id="articles"></div> <!-- Container for articles -->
+        <div id="articles" class="container"></div> <!-- Container for articles -->
     </main>
     <footer>
-        <p>&copy; 2025 Web Articles Project</p>
+        <div class="container">
+            <p>&copy; 2025 Web Articles Project | <a href="#">Privacy Policy</a></p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
