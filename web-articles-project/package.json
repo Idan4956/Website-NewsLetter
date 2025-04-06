@@ -1,0 +1,17 @@
+{
+  "name": "web-articles-project",
+  "version": "1.0.0",
+  "description": "A web project that displays articles by fetching them from a different website.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
