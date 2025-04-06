@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <h1 id="article-title">Article Title</h1>
+        <h1 id="article-title">Loading...</h1>
     </header>
     <main>
-        <div id="article-content"></div> <!-- Content of the article -->
+        <div id="article-content">Loading content...</div>
     </main>
     <footer>
         <p>&copy; 2025 Web Articles Project</p>
@@ -22,8 +22,9 @@
         const title = params.get('title');
         const content = params.get('content');
 
-        document.getElementById('article-title').textContent = title;
-        document.getElementById('article-content').textContent = content;
+        // Populate the article page
+        document.getElementById('article-title').textContent = title || "Article Not Found";
+        document.getElementById('article-content').textContent = content || "No content available for this article.";
     </script>
 </body>
 </html>

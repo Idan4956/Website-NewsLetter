@@ -1,57 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
 }
 
+/* Header Styling */
 header {
-    background: #333;
+    background: #1a73e8; /* Azure blue */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Footer Styling */
 footer {
-    background: #333;
+    background: #1a73e8; /* Azure blue */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Articles Container */
 #articles {
     padding: 1rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Article Card Styling */
 .article {
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     margin-bottom: 1rem;
     padding: 1rem;
-    border-radius: 5px;
-    background: #fff;
+    border-radius: 10px;
+    background: #1e1e2f; /* Dark azure background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Article Title */
 .article h2 {
     margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #4fc3f7; /* Light azure blue */
 }
 
-.article p {
-    margin: 0;
-}
-
+/* Article Link */
 .article a {
     text-decoration: none;
-    color: #007BFF;
+    color: #1a73e8; /* Azure blue */
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .article a:hover {
     text-decoration: underline;
+    color: #4fc3f7; /* Light azure blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .article {
+        padding: 0.8rem;
+    }
+
+    .article h2 {
+        font-size: 1.2rem;
+    }
+
+    .article a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .article {
+        padding: 0.6rem;
+    }
+
+    .article h2 {
+        font-size: 1rem;
+    }
+
+    .article a {
+        font-size: 0.8rem;
+    }
 }
