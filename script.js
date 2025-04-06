@@ -1,4 +1,4 @@
-const apiUrl = 'https://api.example.com/articles'; // Replace with the actual API endpoint
+const apiUrl = 'https://your-real-api-endpoint.com/articles'; // Replace with the actual API endpoint
 
 async function fetchArticles() {
     try {
